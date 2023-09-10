@@ -1,0 +1,6 @@
+﻿  Kurs.cpp
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(56,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(59,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(89,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(92,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  Kurs.vcxproj -> C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\x64\Debug\Kurs.exe
