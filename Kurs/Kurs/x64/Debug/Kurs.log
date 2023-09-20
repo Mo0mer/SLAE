@@ -1,16 +1,16 @@
 ﻿  Kurs.cpp
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(91,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(94,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(125,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(128,25): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(188,31): warning C4244: /=: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(213,31): warning C4244: /=: преобразование "double" в "_Ty", возможна потеря данных
           with
           [
               _Ty=int
           ]
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(205,42): warning C4244: -=: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(219,42): warning C4244: -=: преобразование "double" в "_Ty", возможна потеря данных
           with
           [
               _Ty=int
           ]
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(261,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(262,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(263,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(352,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   Kurs.vcxproj -> C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\x64\Debug\Kurs.exe
