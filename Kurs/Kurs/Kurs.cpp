@@ -68,7 +68,7 @@ public:
 
     void print_vector() {
         for (int i = 0; i < row; i++) {
-            for (int j = 0; j < row + 1; j++) {
+            for (int j = 0; j < row; j++) {
                 std::cout << data[i][j] << ' ';
             }
             std::cout << '\n';
@@ -86,84 +86,119 @@ public:
 
 class Kramer : public Data {
 private:
-    std::vector<double> deter;
+    std::vector<int> deter;
     std::vector<bool> view{ false, false, false };
-    double det_m = 0, det_1 = 0, det_2 = 0, det_3 = 0;
+    std::vector<std::vector<int>> data_m;
 
 public:
     Kramer(int row = 2) : Data(row) {}
 
     ~Kramer() {}
 
-    void make_date() {
-        for (int k = 0; k < data_temp.size(); k++) {
-            data[k].push_back(data_temp[k]);
+    void make_answer(std::vector<int> deter, int row, int det_m) {
+        for (int i = 0; i < row; i++) {
+            int answer_temp = deter[i] / det_m;
+            answer[i] = answer_temp;
         }
     }
 
-    void decision_order_2() {
-        make_date();
-
-        det_m = data[0][0] * data[1][1] - data[1][0] * data[0][1];
-
-        det_1 = data[0][2] * data[1][1] - data[1][2] * data[0][1];
-        det_2 = data[0][0] * data[1][2] - data[1][0] * data[0][2];
-
-        if (det_m == 0) {
-            if (det_1 == 0 && det_2 == 0) {
-                view[1] = true; // СЛАУ имеет бесчисленное множество решений
+    bool allValuesEqualTo(std::vector<int> deter, int row){
+        for (int i = 0; i < row; i++) {
+            if (deter[i] != 0) {
+                return false;
             }
-            else if (det_1 != 0 && det_2 != 0) {
-                view[2] = true; // СЛАУ не имеет решений
-            }
-            return;
         }
-        else {
-            view[0] = true; // СЛАУ имеет решения
-
-            deter.push_back(det_1);
-            deter.push_back(det_2);
-
-            answer.push_back(deter[0] / det_m);
-            answer.push_back(deter[1] / det_m);
-        }
+        return true;
     }
 
-    void decision_order_3() {
-        make_date();
+    bool allValuesNotEqualTo(std::vector<int> deter, int row){
+        for (int i = 0; i < row; i++) {
+            if (deter[i] == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-        det_m = data[0][0] * data[1][1] * data[2][2] + data[1][0] * data[2][1] * data[0][2] + data[0][1] * data[1][2] * data[2][0] -
-            data[2][0] * data[1][1] * data[0][2] - data[2][1] * data[1][2] * data[0][0] - data[1][0] * data[0][1] * data[2][2];
+    std::vector<std::vector<int>> swap_koef(int columnIndex, int row) {
+        std::vector<std::vector<int>> swap_matrix;
 
-        det_1 = data[0][3] * data[1][1] * data[2][2] + data[1][3] * data[2][1] * data[0][2] + data[0][1] * data[1][2] * data[2][3] -
-            data[2][3] * data[1][1] * data[0][2] - data[2][1] * data[1][2] * data[0][3] - data[1][3] * data[0][1] * data[2][2];
+        swap_matrix = data;
 
-        det_2 = data[0][0] * data[1][3] * data[2][2] + data[1][0] * data[2][3] * data[0][2] + data[0][3] * data[1][2] * data[2][0] -
-            data[2][0] * data[1][3] * data[0][2] - data[2][3] * data[1][2] * data[0][0] - data[1][0] * data[0][3] * data[2][2];
+        for (int i = 0; i < row; i++) {
+            swap_matrix[i][columnIndex] = data_temp[i];
+        }
 
-        det_3 = data[0][0] * data[1][1] * data[2][3] + data[1][0] * data[2][1] * data[0][3] + data[0][1] * data[1][3] * data[2][0] -
-            data[2][0] * data[1][1] * data[0][3] - data[2][1] * data[1][3] * data[0][0] - data[1][0] * data[0][1] * data[2][3];
+        return swap_matrix;
+    }
 
+    int determinant(const std::vector<std::vector<int>>& matrix, int n) {
+        // Базовый случай: матрица 1x1
+        if (n == 1) {
+            return matrix[0][0];
+        }
+
+        int det = 0;
+        int sign = 1;
+
+        // Создаем минор матрицы меньшего размера
+        std::vector<std::vector<int>> minor(n - 1, std::vector<int>(n - 1, 0));
+
+        for (int i = 0; i < n; ++i) {
+            int minorRow = 0;
+            for (int j = 1; j < n; ++j) {
+                int minorCol = 0;
+                for (int k = 0; k < n; ++k) {
+                    if (k != i) {
+                        minor[minorRow][minorCol] = matrix[j][k];
+                        minorCol++;
+                    }
+                }
+                minorRow++;
+            }
+
+            // Рекурсивно вычисляем определитель минора и добавляем к общему определителю
+            det += sign * matrix[0][i] * determinant(minor, n - 1);
+            sign = -sign;
+        }
+
+        return det;
+    }
+
+    void decision_order() {
+        int row = data.size();
+
+        data_m = data;
+
+        int det_m = determinant(data_m, row);
+
+        for (int d = 0; d < row; d++) {
+            std::vector<std::vector<int>> data_t = swap_koef(d, row);
+
+            int det_t = determinant(data_t, row);
+
+            deter.push_back(det_t);
+
+        }
         if (det_m == 0) {
-            if (det_1 == 0 && det_2 == 0 && det_3 == 0) {
+            bool all_equal = false, all_not_equal = false;
+
+            all_equal = allValuesEqualTo(deter, row);
+            all_not_equal = allValuesNotEqualTo(deter, row);
+
+            if (all_equal == true && all_not_equal == false) {
                 view[1] = true; // СЛАУ имеет бесчисленное множество решений
             }
-            else if (det_1 != 0 && det_2 != 0 && det_3 != 0) {
+            else if (all_not_equal == true && all_equal == false) {
                 view[2] = true; // СЛАУ не имеет решений
             }
-            return;
         }
         else {
             view[0] = true; // СЛАУ имеет решения
-
-            deter.push_back(det_1);
-            deter.push_back(det_2);
-            deter.push_back(det_3);
-
-            answer.push_back(deter[0] / det_m);
-            answer.push_back(deter[1] / det_m);
-            answer.push_back(deter[2] / det_m);
         }
+
+        make_answer(deter, row, det_m);
+        
     }
 
     void print_answer() {
@@ -240,8 +275,6 @@ public:
 };
 
 class Matr : public Data {
-private:
-    //
 public:
 
     Matr(int row = 2) : Data(row) {};
@@ -385,14 +418,7 @@ int main() {
     if (method == 1) {
         Kramer kr(r);
         kr.make_vector();
-
-        if (r == 2) {
-            kr.decision_order_2();
-        }
-        else if (r >= 3) {
-            kr.decision_order_3();
-        }
-
+        kr.decision_order();
         kr.print_answer();
     }
     else if (method == 2) {
