@@ -10,12 +10,7 @@ private:
 public:
     Data(int row = 2) : row(row), answer(row, 0.0) {}
 
-    ~Data() {
-        // Инициализируем вектор data нулями
-        data.resize(row, std::vector<int>(row, 0));
-        // Инициализируем вектор data_temp нулями
-        data_temp.resize(row, 0);
-    }
+    ~Data() {}
 
     std::vector<std::vector<int>> data;
     std::vector<int> data_temp;
@@ -38,7 +33,7 @@ public:
 
         std::cout << "Введите вектор свободных членов: ";
 
-        
+
         data_temp.reserve(row);
 
         for (int i = 0; i < row; i++) {
@@ -76,11 +71,11 @@ public:
 
         std::cout << '\n';
 
-        for (int j = 0; j < row; j++){
+        for (int j = 0; j < row; j++) {
             std::cout << data_temp[j] << ' ';
         }
 
-        std:: cout << '\n';
+        std::cout << '\n';
     }
 };
 
@@ -102,7 +97,7 @@ public:
         }
     }
 
-    bool allValuesEqualTo(std::vector<int> deter, int row){
+    bool allValuesEqualTo(std::vector<int> deter, int row) {
         for (int i = 0; i < row; i++) {
             if (deter[i] != 0) {
                 return false;
@@ -111,7 +106,7 @@ public:
         return true;
     }
 
-    bool allValuesNotEqualTo(std::vector<int> deter, int row){
+    bool allValuesNotEqualTo(std::vector<int> deter, int row) {
         for (int i = 0; i < row; i++) {
             if (deter[i] == 0) {
                 return false;
@@ -198,7 +193,7 @@ public:
         }
 
         make_answer(deter, row, det_m);
-        
+
     }
 
     void print_answer() {
@@ -221,56 +216,73 @@ public:
 
 class Gaus : public Data {
 private:
-    double pivot = 0, factor = 0;
+    bool mistake = true;
 
 public:
     Gaus(int row = 2) : Data(row) {}
 
     ~Gaus() {}
 
-    void SolveGaussian(int n) {
-        // Прямой ход метода Гаусса
-        for (int i = 0; i < n; i++) {
-            // Поиск максимального элемента в текущем столбце для частичного выбора строки
-            int maxRow = i;
-            for (int j = i + 1; j < n; j++) {
-                if (std::abs(data[j][i]) > std::abs(data[maxRow][i])) {
-                    maxRow = j;
+    void SolveGaussian() {
+        int n = data.size();
+
+        const double eps = 0.00001;  // точность
+
+        for (int k = 0; k < n; k++) {
+            // Поиск строки с максимальным a[i][k]
+            double max = std::abs(data[k][k]);
+            int index = k;
+            for (int i = k + 1; i < n; i++) {
+                if (std::abs(data[i][k]) > max) {
+                    max = std::abs(data[i][k]);
+                    index = i;
                 }
             }
-            // Перестановка строк, если необходимо
-            if (maxRow != i) {
-                std::swap(data[i], data[maxRow]);
+            // Перестановка строк
+            if (max < eps) {
+                // нет ненулевых диагональных элементов
+
+                mistake = false;
             }
-            // Приведение текущей строки к виду, где главный элемент равен 1
-            pivot = data[i][i];
-            for (int j = i; j <= n; j++) {
-                data[i][j] /= pivot;
-            }
-            // Обнуление элементов под текущим главным элементом
-            for (int k = i + 1; k < n; k++) {
-                factor = data[k][i];
-                for (int j = i; j <= n; j++) {
-                    data[k][j] -= factor * data[i][j];
-                }
+
+            std::swap(data[k], data[index]);
+            std::swap(data_temp[k], data_temp[index]);
+
+            // Нормализация уравнений
+            for (int i = k; i < n; i++) {
+                double temp = data[i][k];
+                if (std::abs(temp) < eps) continue; // для нулевого коэффициента пропустить
+                for (int j = 0; j < n; j++)
+                    data[i][j] = (double)data[i][j] / (double)temp;
+                data_temp[i] = (double)data_temp[i] / (double)temp;
+                if (i == k)  continue; // уравнение не вычитать само из себя
+                for (int j = 0; j < n; j++)
+                    data[i][j] = data[i][j] - data[k][j];
+                data_temp[i] = data_temp[i] - data_temp[k];
             }
         }
-        // Обратный ход метода Гаусса
-        for (int i = n - 1; i >= 0; i--) {
-            answer[i] = data[i][n];
-            for (int j = i + 1; j < n; j++) {
-                answer[i] -= data[i][j] * answer[j];
-            }
+
+        // обратная подстановка
+        for (int k = n - 1; k >= 0; k--) {
+            answer[k] = data_temp[k];
+            for (int i = 0; i < k; i++)
+                data_temp[i] = data_temp[i] - data[i][k] * answer[k];
         }
     }
 
     void print_answer() {
         std::cout << '\n';
 
-        for (double val : answer) {
-            std::cout << val << ' ';
+        if (mistake == true) {
+            for (double val : answer) {
+                std::cout << val << ' ';
+            }
+            std::cout << '\n';
         }
-        std::cout << '\n';
+        else {
+            std::cout << "Решение получить невозможно из-за нулевого столбца " << std::endl;
+        }
+
     }
 };
 
@@ -285,6 +297,9 @@ public:
         std::cout << '\n';
 
         for (double val : answer) {
+            if (std::abs(val) < 1e-6) {
+                val = 0;
+            }
             std::cout << val << ' ';
         }
         std::cout << '\n';
@@ -301,7 +316,7 @@ public:
             }
         }
     }
-    
+
     int Gauss(std::vector<std::vector<int>>& matrica_a, int n, std::vector<double>& massiv_b, std::vector<double>& x) {
         int i, j, k, r;
         double c, M, max, s;
@@ -385,7 +400,7 @@ public:
         int N = data_temp.size();
 
         std::vector<std::vector<double>> matr_one(N, std::vector<double>(N));
-        
+
         int result = INVERSE(data, N, matr_one);
 
         if (result == 0) {
@@ -396,6 +411,145 @@ public:
         }
     }
 
+};
+
+class Jacob : public Data {
+public:
+    Jacob(int row = 2) : Data(row) {};
+
+    bool flag = true;
+
+    ~Jacob() {}
+
+    void print_answer() {
+        if (flag) {
+            for (int i : answer) {
+                std::cout << i << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
+
+    // Функция для вычисления нормы невязки
+    double calculateResidualNorm(const std::vector<double>& x, int n) {
+        double norm = 0.0;
+        for (int i = 0; i < n; i++) {
+            double sum = 0.0;
+            for (int j = 0; j < n; j++) {
+                sum += data[i][j] * x[j];
+            }
+            double residual = sum - data_temp[i];
+            norm += residual * residual;
+        }
+        return sqrt(norm);
+    }
+
+    // Функция для выполнения итераций метода Якоби
+    void performJacobiIterations(double epsilon, int n) {
+        int iterations = 0; // Счетчик итераций
+        std::vector<double> x(n, 0.0);
+
+        while (true) { // Бесконечный цикл, который завершится при достижении погрешности
+            std::vector<double> x_new(n);
+
+            for (int i = 0; i < n; i++) {
+                double sum = 0.0;
+                for (int j = 0; j < n; j++) {
+                    if (j != i) {
+                        sum += data[i][j] * x[j];
+                    }
+                }
+                x_new[i] = (data_temp[i] - sum) / data[i][i];
+            }
+
+            // Проверяем условие выхода
+            double residualNorm = calculateResidualNorm(x_new, n);
+            std::cout << "Итерация " << iterations + 1 << ", Норма невязки: " << residualNorm << std::endl;
+
+            if (residualNorm < epsilon) {
+                std::cout << "Решение найдено с заданной погрешностью." << std::endl;
+                
+                for (int i = 0; i < n; i++) {
+                    answer[i] = x_new[i];
+                }
+            }
+
+            // Обновляем текущее приближение
+            x = x_new;
+
+            iterations++;
+        }
+    }
+    
+    void computeSpectralRadius() {
+        int n = data.size();
+
+        // Создаем вектор для хранения собственных значений
+        std::vector<double> eigenvalues(n, 0.0);
+
+        // Проводим итерации для нахождения собственных значений матрицы
+        for (int i = 0; i < n; ++i) {
+            std::vector<double> x(n, 1.0); // Начальный приближенный собственный вектор
+            double prevEigenvalue = 0.0;
+
+            for (int iteration = 0; iteration < 1000; ++iteration) {
+                // Умножаем матрицу на вектор x: Ax = A * x
+                std::vector<double> Ax(n, 0.0);
+                for (int j = 0; j < n; ++j) {
+                    for (int k = 0; k < n; ++k) {
+                        Ax[j] += data[j][k] * x[k];
+                    }
+                }
+
+                // Находим собственное значение как отношение скалярного произведения Ax и x
+                double eigenvalue = 0.0;
+                for (int j = 0; j < n; ++j) {
+                    eigenvalue += Ax[j] * x[j];
+                }
+
+                // Нормализуем вектор x
+                double norm = 0.0;
+                for (int j = 0; j < n; ++j) {
+                    norm += x[j] * x[j];
+                }
+                norm = std::sqrt(norm);
+
+                for (int j = 0; j < n; ++j) {
+                    x[j] /= norm;
+                }
+
+                // Проверяем на сходимость
+                if (std::fabs(eigenvalue - prevEigenvalue) < 1e-6) { // Точность 1e-6
+                    eigenvalues[i] = eigenvalue;
+                    break;
+                }
+
+                prevEigenvalue = eigenvalue;
+            }
+        }
+
+        // Находим максимальное собственное значение
+        double spectral_radius = double(eigenvalues[0]);
+        for (int i = 1; i < n; ++i) {
+            if (double(eigenvalues[i]) > spectral_radius) {
+                spectral_radius = double(eigenvalues[i]);
+            }
+        }
+
+        if (spectral_radius > 1) {
+            flag = false;
+
+            std::cout << std::endl << "Спектральный радиус матрицы больше 1 " << '\n' <<
+                "Система не может быть решена методом Якоби" << std::endl << std::endl;
+        }
+        else {
+            double epsilon;
+            std::cout << "Введите погрешность вычислений: " << std::endl;
+            std::cin >> epsilon;
+            performJacobiIterations(epsilon, n);
+        }
+
+    }
 };
 
 int main() {
@@ -409,9 +563,10 @@ int main() {
 
     int method;
 
-    std::cout << "Выберите метод решения СЛАУ:" << '\n' << "1) Крамер" << '\n' << 
-                                                            "2) Гаус" << std::endl <<
-                                                            "3) Матричный" << std::endl << '\n';
+    std::cout << "Выберите метод решения СЛАУ:" << '\n' << "1) Крамер" << '\n' <<
+        "2) Гаус" << std::endl <<
+        "3) Матричный" << std::endl <<
+        "4) Якоби" << std::endl << '\n';
     std::cin >> method;
     std::cout << '\n';
 
@@ -424,7 +579,7 @@ int main() {
     else if (method == 2) {
         Gaus gs(r);
         gs.make_vector();
-        gs.SolveGaussian(r);
+        gs.SolveGaussian();
         gs.print_answer();
     }
     else if (method == 3) {
@@ -432,6 +587,12 @@ int main() {
         mt.make_vector();
         mt.begin_inverse();
         mt.print_answer();
+    }
+    else if (method == 4) {
+        Jacob jc(r);
+        jc.make_vector();
+        jc.computeSpectralRadius();
+        jc.print_answer();
     }
     else {
         std::cout << "Неверный метод. Выход." << std::endl;

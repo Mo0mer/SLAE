@@ -1,17 +1,29 @@
 ﻿  Kurs.cpp
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(169,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(248,31): warning C4244: /=: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(164,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(227,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(256,53): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
           with
           [
               _Ty=int
           ]
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(254,42): warning C4244: -=: преобразование "double" в "_Ty", возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(257,53): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
           with
           [
               _Ty=int
           ]
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(294,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(295,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(296,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(385,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(269,45): warning C4244: =: преобразование "_Ty" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty=int
+          ]
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(309,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(310,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(311,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(400,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(426,32): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kurs.cpp(485,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   Kurs.vcxproj -> C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\x64\Debug\Kurs.exe
