@@ -17,6 +17,6 @@ public:
     bool allValuesNotEqualTo(std::vector<int> deter, int row);
     std::vector<std::vector<int>> swap_koef(int columnIndex, int row);
     int determinant(const std::vector<std::vector<int>>& matrix, int n);
-    void decision_order();
-    void print_answer();
+    void solve() override;
+    void print_answer() override;
 };

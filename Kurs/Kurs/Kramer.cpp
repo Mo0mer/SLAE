@@ -73,7 +73,7 @@ int Kramer::determinant(const std::vector<std::vector<int>>& matrix, int n) {
     return det;
 }
 
-void Kramer::decision_order() {
+void Kramer::solve() {
     int row = data.size();
 
     data_m = data;

@@ -65,3 +65,6 @@ void Data::print_vector() {
 
     std::cout << '\n';
 }
+
+void solve(){}
+void print_answer(){}

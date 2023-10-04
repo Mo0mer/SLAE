@@ -10,6 +10,6 @@ public:
     Gaus(int row = 2);
     ~Gaus();
 
-    void SolveGaussian();
-    void print_answer();
+    void solve() override;
+    void print_answer() override;
 };

@@ -3,7 +3,7 @@
 Gaus::Gaus(int row) : Data(row) {}
 Gaus::~Gaus() {}
 
-void Gaus::SolveGaussian() {
+void Gaus::solve() {
     int n = data.size();
 
     const double eps = 0.00001;  // точность

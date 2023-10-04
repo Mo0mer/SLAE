@@ -1,4 +1,35 @@
-﻿  Jacob.cpp
+﻿  Data.cpp
+  Gaus.cpp
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Gaus.cpp(7,24): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Gaus.cpp(36,49): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Gaus.cpp(37,49): warning C4244: =: преобразование "double" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Gaus.cpp(49,41): warning C4244: =: преобразование "_Ty" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  Jacob.cpp
 C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Jacob.cpp(8,28): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
 C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Jacob.cpp(65,24): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Kramer.cpp
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Kramer.cpp(77,26): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Kurs.cpp
+  Matr.cpp
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Matr.cpp(19,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Matr.cpp(20,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Matr.cpp(21,38): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\Kurs\Matr.cpp(110,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
   Kurs.vcxproj -> C:\Users\Admin\source\repos\ConsoleApplication1\Kurs\x64\Debug\Kurs.exe

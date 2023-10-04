@@ -22,32 +22,30 @@ int main() {
     std::cin >> method;
     std::cout << '\n';
 
+    Data* solver = nullptr;
+
     if (method == 1) {
-        Kramer kr(r);
-        kr.make_vector();
-        kr.decision_order();
-        kr.print_answer();
+        solver = new Kramer(r);
     }
-    else if (method == 2) { // Гаус выдает не до конца правильные ответы
-        Gaus gs(r);
-        gs.make_vector();
-        gs.SolveGaussian();
-        gs.print_answer();
+    else if (method == 2) {
+        solver = new Gaus(r);
     }
     else if (method == 3) {
-        Matr mt(r);
-        mt.make_vector();
-        mt.begin_inverse();
-        mt.print_answer();
+        solver = new Matr(r);
     }
-    else if (method == 4) { // Тоже куча своих тараканов
-        Jacob jc(r);
-        jc.make_vector();
-        jc.computeSpectralRadius();
-        jc.print_answer();
+    else if (method == 4) {
+        solver = new Jacob(r);
     }
     else {
         std::cout << "Неверный метод. Выход." << std::endl;
+        return 1; // Выйти из программы с ошибкой
+    }
+
+    if (solver) {
+        solver->make_vector();
+        solver->solve(); // Вызываем виртуальную функцию
+        solver->print_answer();
+        delete solver; // Освобождаем память
     }
 
     return 0;

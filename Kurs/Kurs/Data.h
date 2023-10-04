@@ -19,4 +19,6 @@ public:
 
     void make_vector();
     void print_vector();
+    virtual void solve(){}
+    virtual void print_answer(){}
 };

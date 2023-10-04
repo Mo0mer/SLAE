@@ -106,7 +106,7 @@ int Matr::INVERSE(std::vector<std::vector<int>>& a, int n, std::vector<std::vect
     else return 0;
 }
 
-void Matr::begin_inverse() {
+void Matr::solve() {
     int N = data_temp.size();
 
     std::vector<std::vector<double>> matr_one(N, std::vector<double>(N));

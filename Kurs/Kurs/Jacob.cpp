@@ -61,7 +61,7 @@ void Jacob::performJacobiIterations(double epsilon, int n) {
     }
 }
 
-void Jacob::computeSpectralRadius() {
+void Jacob::solve() {
     int n = data.size();
 
     // —оздаем вектор дл€ хранени€ собственных значений
