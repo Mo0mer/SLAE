@@ -117,6 +117,6 @@ void Matr::solve() {
         multiplyMatrixVector(matr_one);
     }
     else {
-        std::cout << "Обратной матрицы не существует, СЛАУ решений не имеет" << std::endl;
+        throw MatrixException("Обратной матрицы не существует, СЛАУ решений не имеет");
     }
 }

@@ -7,7 +7,7 @@ public:
     Jacob(int row = 2);
     ~Jacob();
 
-    bool flag = true;
+    int maxIterations = 3000;
 
     void print_answer() override;
     double calculateResidualNorm(const std::vector<double>& x, int n);

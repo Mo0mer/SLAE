@@ -3,6 +3,7 @@
 #include "Gaus.h"
 #include "Matr.h"
 #include "Jacob.h"
+#include "exception.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");
@@ -42,9 +43,15 @@ int main() {
     }
 
     if (solver) {
-        solver->make_vector();
-        solver->solve(); // Вызываем виртуальную функцию
-        solver->print_answer();
+        try {
+            solver->make_vector();
+            solver->solve(); // Вызываем виртуальную функцию
+            solver->print_answer();
+        }
+        catch (const MatrixException& ex) {
+            // Обрабатываем пользовательское исключение
+            std::cerr << "Исключение: " << ex.what() << std::endl;
+        }
         delete solver; // Освобождаем память
     }
 

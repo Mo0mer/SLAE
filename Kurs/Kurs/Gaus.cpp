@@ -22,7 +22,7 @@ void Gaus::solve() {
         if (max < eps) {
             // нет ненулевых диагональных элементов
 
-            mistake = false;
+            throw MatrixException("Решение получить невозможно из-за нулевого столбца.");
         }
 
         std::swap(data[k], data[index]);
@@ -53,13 +53,9 @@ void Gaus::solve() {
 void Gaus::print_answer() {
     std::cout << '\n';
 
-    if (mistake == true) {
-        for (double val : answer) {
-            std::cout << val << ' ';
-        }
-        std::cout << '\n';
+    for (double val : answer) {
+        std::cout << val << ' ';
     }
-    else {
-        std::cout << "Решение получить невозможно из-за нулевого столбца " << std::endl;
-    }
+    std::cout << '\n';
+
 }

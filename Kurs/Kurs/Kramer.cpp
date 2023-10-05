@@ -4,6 +4,10 @@ Kramer::Kramer(int row) : Data(row) {}
 Kramer::~Kramer(){}
 
 void Kramer::make_answer(std::vector<int> deter, int row, int det_m) {
+    if (det_m == 0) {
+        throw DivisionByZeroException();
+    }
+
     for (int i = 0; i < row; i++) {
         int answer_temp = deter[i] / det_m;
         answer[i] = answer_temp;
@@ -99,6 +103,9 @@ void Kramer::solve() {
         }
         else if (all_not_equal == true && all_equal == false) {
             view[2] = true; // СЛАУ не имеет решений
+        }
+        else {
+            throw DivisionByZeroException();
         }
     }
     else {

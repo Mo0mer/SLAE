@@ -4,12 +4,10 @@ Jacob::Jacob(int row) : Data(row) {}
 Jacob::~Jacob(){}
 
 void Jacob::print_answer() {
-    if (flag) {
-        for (int i : answer) {
-            std::cout << i << " ";
-        }
-        std::cout << std::endl;
+    for (int i : answer) {
+        std::cout << i << " ";
     }
+    std::cout << std::endl;
 }
 
 double Jacob::calculateResidualNorm(const std::vector<double>& x, int n) {
@@ -28,6 +26,10 @@ double Jacob::calculateResidualNorm(const std::vector<double>& x, int n) {
 void Jacob::performJacobiIterations(double epsilon, int n) {
     int iterations = 0; // Счетчик итераций
     std::vector<double> x(n, 1.0);
+
+    if (iterations >= maxIterations) {
+        throw MatrixException("Метод не сходится к решению.");
+    }
 
     while (true) { // Бесконечный цикл, который завершится при достижении погрешности
         std::vector<double> x_new(n);
@@ -119,15 +121,23 @@ void Jacob::solve() {
     std::cout << spectral_radius;
 
     if (spectral_radius >= 1 || spectral_radius <= 0) {
-        flag = false;
 
-        std::cout << std::endl << "Спектральный радиус матрицы больше 1" << '\n' <<
-            "Система не может быть решена методом Якоби" << std::endl << std::endl;
+        throw MatrixException("Спектральный радиус матрицы больше 1. \nСистема не может быть решена методом Якоби");
     }
     else {
         double epsilon;
-        std::cout << "Введите погрешность вычислений: " << std::endl;
-        std::cin >> epsilon;
-        performJacobiIterations(epsilon, n);
+        try {
+            std::cout << "Введите погрешность вычислений: " << std::endl;
+            std::cin >> epsilon;
+
+            if (std::cin.fail() || epsilon <= 0) {
+                throw MatrixException("Погрешность должна быть положительным числом.");
+            }
+
+            performJacobiIterations(epsilon, n);
+        }
+        catch (const InvalidInputException& e) {
+            std::cerr << "Ошибка ввода погрешности: " << e.what() << std::endl;
+        }
     }
 }

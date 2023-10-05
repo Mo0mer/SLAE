@@ -21,30 +21,22 @@ void Data::make_vector() {
 
     std::cout << "¬ведите вектор свободных членов: ";
 
-
     data_temp.reserve(row);
 
-    for (int i = 0; i < row; i++) {
-        int inp;
-        std::cin >> inp;
-        data_temp.push_back(inp);
+    while (true) {
+        int del;
+        if (!(std::cin >> del)) {
+            break;
+        }
+        data_temp.push_back(del);
     }
 
     if (data_temp.size() != row) {
         if (data_temp.size() > row) {
-            std::cout << " оличество значений вектора превышает пор€док матрицы, повторите ввод." << '\n';
+            throw MatrixException(" оличество значений вектора превышает пор€док матрицы.");
         }
         else if (data_temp.size() < row) {
-            std::cout << " оличество значений вектора меньше пор€дка матрицы, повторите ввод." << '\n';
-        }
-        data_temp.clear();
-
-        while (true) {
-            int del;
-            if (!(std::cin >> del)) {
-                break;
-            }
-            data_temp.push_back(del);
+            throw MatrixException(" оличество значений вектора меньше пор€дка матрицы.");
         }
     }
 }

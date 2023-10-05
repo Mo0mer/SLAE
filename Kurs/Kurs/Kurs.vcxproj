@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data.cpp" />
+    <ClCompile Include="exception.cpp" />
     <ClCompile Include="Gaus.cpp" />
     <ClCompile Include="Jacob.cpp" />
     <ClCompile Include="Kramer.cpp" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
+    <ClInclude Include="exception.h" />
     <ClInclude Include="Gaus.h" />
     <ClInclude Include="Jacob.h" />
     <ClInclude Include="Kramer.h" />
