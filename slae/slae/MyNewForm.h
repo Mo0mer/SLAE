@@ -1,4 +1,5 @@
-#pragma once
+п»ї#pragma once
+#include <windows.h>
 
 namespace slae {
 
@@ -10,7 +11,7 @@ namespace slae {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyNewForm
+	/// РЎРІРѕРґРєР° РґР»СЏ MyNewForm
 	/// </summary>
 	public ref class MyNewForm : public System::Windows::Forms::Form
 	{
@@ -18,14 +19,14 @@ namespace slae {
 		MyNewForm(void)
 		{
 			InitializeComponent();
-			dataGridView1->RowCount = 2;
-			dataGridView1->ColumnCount = 2;
+			dataGridView1->RowCount = 1;
+			dataGridView1->ColumnCount = 1;
 
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyNewForm()
 		{
@@ -47,8 +48,8 @@ namespace slae {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
+
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
@@ -68,6 +69,26 @@ namespace slae {
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ button12;
+	private: System::Windows::Forms::Button^ button13;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Button^ button14;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Button^ button15;
+	private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ button17;
+	private: System::Windows::Forms::Button^ button18;
+	private: System::Windows::Forms::Button^ button19;
+	private: System::Windows::Forms::Button^ button20;
+	private: System::Windows::Forms::Button^ button21;
+	private: System::Windows::Forms::Button^ button22;
 
 
 		   //bool corr_input = false;
@@ -77,14 +98,14 @@ namespace slae {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -98,8 +119,6 @@ namespace slae {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -117,8 +136,31 @@ namespace slae {
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button13 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->button17 = (gcnew System::Windows::Forms::Button());
+			this->button18 = (gcnew System::Windows::Forms::Button());
+			this->button19 = (gcnew System::Windows::Forms::Button());
+			this->button20 = (gcnew System::Windows::Forms::Button());
+			this->button21 = (gcnew System::Windows::Forms::Button());
+			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			this->panel2->SuspendLayout();
+			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -152,7 +194,7 @@ namespace slae {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(104, 42);
 			this->button6->TabIndex = 6;
-			this->button6->Text = L"Якоби";
+			this->button6->Text = L"РЇРєРѕР±Рё";
 			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Visible = false;
 			this->button6->Click += gcnew System::EventHandler(this, &MyNewForm::button6_Click);
@@ -172,7 +214,7 @@ namespace slae {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(104, 42);
 			this->button5->TabIndex = 5;
-			this->button5->Text = L"Матричный";
+			this->button5->Text = L"РњР°С‚СЂРёС‡РЅС‹Р№";
 			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Visible = false;
 			this->button5->Click += gcnew System::EventHandler(this, &MyNewForm::button5_Click);
@@ -192,7 +234,7 @@ namespace slae {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(104, 42);
 			this->button4->TabIndex = 4;
-			this->button4->Text = L"Гаус";
+			this->button4->Text = L"Р“Р°СѓСЃ";
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Visible = false;
 			this->button4->Click += gcnew System::EventHandler(this, &MyNewForm::button4_Click);
@@ -212,7 +254,7 @@ namespace slae {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(104, 42);
 			this->button3->TabIndex = 3;
-			this->button3->Text = L"Крамер";
+			this->button3->Text = L"РљСЂР°РјРµСЂ";
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Visible = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyNewForm::button3_Click);
@@ -232,7 +274,7 @@ namespace slae {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(104, 42);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"Ввод";
+			this->button2->Text = L"Р’РІРѕРґ";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyNewForm::button2_Click);
 			// 
@@ -251,7 +293,7 @@ namespace slae {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(104, 42);
 			this->button1->TabIndex = 1;
-			this->button1->Text = L"Файл";
+			this->button1->Text = L"Р¤Р°Р№Р»";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyNewForm::button1_Click);
 			// 
@@ -267,7 +309,7 @@ namespace slae {
 					this->dataGridViewTextBoxColumn8
 			});
 			this->dataGridView1->EnableHeadersVisualStyles = false;
-			this->dataGridView1->Location = System::Drawing::Point(12, 87);
+			this->dataGridView1->Location = System::Drawing::Point(12, 100);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->dataGridView1->RowHeadersVisible = false;
@@ -283,30 +325,6 @@ namespace slae {
 			// dataGridViewTextBoxColumn8
 			// 
 			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(472, 341);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(71, 17);
-			this->radioButton1->TabIndex = 2;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Успешно";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyNewForm::radioButton1_CheckedChanged);
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(472, 364);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(81, 17);
-			this->radioButton2->TabIndex = 3;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Провально";
-			this->radioButton2->UseVisualStyleBackColor = true;
-			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyNewForm::radioButton2_CheckedChanged);
 			// 
 			// Column1
 			// 
@@ -351,33 +369,33 @@ namespace slae {
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button7->Location = System::Drawing::Point(12, 341);
+			this->button7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(123)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(10)));
+			this->button7->Location = System::Drawing::Point(0, 0);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(104, 42);
+			this->button7->Size = System::Drawing::Size(65, 42);
 			this->button7->TabIndex = 7;
-			this->button7->Text = L" + строка";
+			this->button7->Text = L" + ";
 			this->button7->UseVisualStyleBackColor = false;
 			this->button7->Visible = false;
 			this->button7->Click += gcnew System::EventHandler(this, &MyNewForm::button7_Click);
 			// 
 			// button8
 			// 
-			this->button8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(151)));
-			this->button8->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(151)));
+			this->button8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(171)));
+			this->button8->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(73)), static_cast<System::Int32>(static_cast<System::Byte>(171)));
 			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button8->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button8->Location = System::Drawing::Point(232, 341);
+			this->button8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)), static_cast<System::Int32>(static_cast<System::Byte>(15)),
+				static_cast<System::Int32>(static_cast<System::Byte>(106)));
+			this->button8->Location = System::Drawing::Point(0, 0);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(104, 42);
+			this->button8->Size = System::Drawing::Size(65, 42);
 			this->button8->TabIndex = 7;
-			this->button8->Text = L"+ столбец";
+			this->button8->Text = L"+ ";
 			this->button8->UseVisualStyleBackColor = false;
 			this->button8->Visible = false;
 			this->button8->Click += gcnew System::EventHandler(this, &MyNewForm::button8_Click);
@@ -391,33 +409,33 @@ namespace slae {
 			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button9->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button9->Location = System::Drawing::Point(122, 341);
+			this->button9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(123)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(10)));
+			this->button9->Location = System::Drawing::Point(67, 0);
 			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(104, 42);
+			this->button9->Size = System::Drawing::Size(65, 42);
 			this->button9->TabIndex = 8;
-			this->button9->Text = L" - строка";
+			this->button9->Text = L" - ";
 			this->button9->UseVisualStyleBackColor = false;
 			this->button9->Visible = false;
 			this->button9->Click += gcnew System::EventHandler(this, &MyNewForm::button9_Click);
 			// 
 			// button10
 			// 
-			this->button10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(151)));
-			this->button10->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(151)));
+			this->button10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)), static_cast<System::Int32>(static_cast<System::Byte>(73)),
+				static_cast<System::Int32>(static_cast<System::Byte>(171)));
+			this->button10->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)),
+				static_cast<System::Int32>(static_cast<System::Byte>(73)), static_cast<System::Int32>(static_cast<System::Byte>(171)));
 			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button10->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button10->Location = System::Drawing::Point(342, 341);
+			this->button10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)), static_cast<System::Int32>(static_cast<System::Byte>(15)),
+				static_cast<System::Int32>(static_cast<System::Byte>(106)));
+			this->button10->Location = System::Drawing::Point(67, 0);
 			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(104, 42);
+			this->button10->Size = System::Drawing::Size(65, 42);
 			this->button10->TabIndex = 9;
-			this->button10->Text = L"- столбец";
+			this->button10->Text = L"- ";
 			this->button10->UseVisualStyleBackColor = false;
 			this->button10->Visible = false;
 			this->button10->Click += gcnew System::EventHandler(this, &MyNewForm::button10_Click);
@@ -426,16 +444,16 @@ namespace slae {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
-			this->label1->Location = System::Drawing::Point(568, 133);
+			this->label1->Location = System::Drawing::Point(581, 171);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(137, 23);
 			this->label1->TabIndex = 10;
-			this->label1->Text = L"Решение системы";
+			this->label1->Text = L"Р РµС€РµРЅРёРµ СЃРёСЃС‚РµРјС‹";
 			this->label1->Visible = false;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(523, 184);
+			this->textBox1->Location = System::Drawing::Point(536, 222);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(214, 20);
 			this->textBox1->TabIndex = 11;
@@ -452,11 +470,11 @@ namespace slae {
 				static_cast<System::Byte>(0)));
 			this->button11->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button11->Location = System::Drawing::Point(523, 236);
+			this->button11->Location = System::Drawing::Point(536, 274);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(214, 42);
 			this->button11->TabIndex = 7;
-			this->button11->Text = L"Сохранить решение";
+			this->button11->Text = L"РЎРѕС…СЂР°РЅРёС‚СЊ СЂРµС€РµРЅРёРµ";
 			this->button11->UseVisualStyleBackColor = false;
 			this->button11->Visible = false;
 			this->button11->Click += gcnew System::EventHandler(this, &MyNewForm::button11_Click);
@@ -465,11 +483,11 @@ namespace slae {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
-			this->label2->Location = System::Drawing::Point(554, 133);
+			this->label2->Location = System::Drawing::Point(568, 171);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(163, 23);
 			this->label2->TabIndex = 12;
-			this->label2->Text = L"Введите погрешность";
+			this->label2->Text = L"Р’РІРµРґРёС‚Рµ РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ";
 			this->label2->Visible = false;
 			// 
 			// button12
@@ -483,14 +501,321 @@ namespace slae {
 				static_cast<System::Byte>(0)));
 			this->button12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button12->Location = System::Drawing::Point(523, 236);
+			this->button12->Location = System::Drawing::Point(536, 274);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(214, 42);
 			this->button12->TabIndex = 13;
-			this->button12->Text = L"Решить систему";
+			this->button12->Text = L"Р РµС€РёС‚СЊ СЃРёСЃС‚РµРјСѓ";
 			this->button12->UseVisualStyleBackColor = false;
 			this->button12->Visible = false;
 			this->button12->Click += gcnew System::EventHandler(this, &MyNewForm::button12_Click);
+			// 
+			// button13
+			// 
+			this->button13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)), static_cast<System::Int32>(static_cast<System::Byte>(83)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)));
+			this->button13->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(1)),
+				static_cast<System::Int32>(static_cast<System::Byte>(83)), static_cast<System::Int32>(static_cast<System::Byte>(199)));
+			this->button13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button13->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button13->Location = System::Drawing::Point(708, 318);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(42, 42);
+			this->button13->TabIndex = 14;
+			this->button13->Text = L"\?";
+			this->button13->UseVisualStyleBackColor = false;
+			this->button13->Visible = false;
+			this->button13->Click += gcnew System::EventHandler(this, &MyNewForm::button13_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
+			this->label3->Location = System::Drawing::Point(146, 348);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(141, 23);
+			this->label3->TabIndex = 15;
+			this->label3->Text = L"РЎРІРѕР±РѕРґРЅС‹Рµ С‡Р»РµРЅС‹";
+			this->label3->Visible = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
+			this->label4->Location = System::Drawing::Point(157, 74);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(121, 23);
+			this->label4->TabIndex = 16;
+			this->label4->Text = L"РљРѕСЌС„С„РёС†РёРµРЅС‚С‹";
+			this->label4->Visible = false;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
+			this->label5->Location = System::Drawing::Point(63, 411);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(61, 23);
+			this->label5->TabIndex = 17;
+			this->label5->Text = L"РЎС‚СЂРѕРєР°";
+			this->label5->Visible = false;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
+			this->label6->Location = System::Drawing::Point(218, 411);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(71, 23);
+			this->label6->TabIndex = 18;
+			this->label6->Text = L"РЎС‚РѕР»Р±РµС†";
+			this->label6->Visible = false;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->AllowUserToOrderColumns = true;
+			this->dataGridView2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->dataGridView2->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->ColumnHeadersVisible = false;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->dataGridViewTextBoxColumn9,
+					this->dataGridViewTextBoxColumn10
+			});
+			this->dataGridView2->EnableHeadersVisualStyles = false;
+			this->dataGridView2->Location = System::Drawing::Point(12, 374);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			this->dataGridView2->RowHeadersVisible = false;
+			this->dataGridView2->Size = System::Drawing::Size(434, 25);
+			this->dataGridView2->TabIndex = 19;
+			this->dataGridView2->Visible = false;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+			// 
+			// dataGridViewTextBoxColumn10
+			// 
+			this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(123)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(10)));
+			this->panel2->Controls->Add(this->button7);
+			this->panel2->Controls->Add(this->button9);
+			this->panel2->Location = System::Drawing::Point(26, 437);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(132, 42);
+			this->panel2->TabIndex = 20;
+			this->panel2->Visible = false;
+			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)), static_cast<System::Int32>(static_cast<System::Byte>(15)),
+				static_cast<System::Int32>(static_cast<System::Byte>(106)));
+			this->panel3->Controls->Add(this->button8);
+			this->panel3->Controls->Add(this->button10);
+			this->panel3->Location = System::Drawing::Point(188, 437);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(132, 42);
+			this->panel3->TabIndex = 21;
+			this->panel3->Visible = false;
+			// 
+			// button14
+			// 
+			this->button14->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(75)));
+			this->button14->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(208)),
+				static_cast<System::Int32>(static_cast<System::Byte>(53)), static_cast<System::Int32>(static_cast<System::Byte>(75)));
+			this->button14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button14->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)), static_cast<System::Int32>(static_cast<System::Byte>(15)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->button14->Location = System::Drawing::Point(350, 437);
+			this->button14->Name = L"button14";
+			this->button14->Size = System::Drawing::Size(65, 42);
+			this->button14->TabIndex = 10;
+			this->button14->Text = L"вџІ";
+			this->button14->UseVisualStyleBackColor = false;
+			this->button14->Visible = false;
+			this->button14->Click += gcnew System::EventHandler(this, &MyNewForm::button14_Click);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15));
+			this->label7->Location = System::Drawing::Point(346, 411);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(76, 23);
+			this->label7->TabIndex = 22;
+			this->label7->Text = L"РћС‡РёСЃС‚РёС‚СЊ";
+			this->label7->Visible = false;
+			// 
+			// button15
+			// 
+			this->button15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(1)));
+			this->button15->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(141)), static_cast<System::Int32>(static_cast<System::Byte>(1)));
+			this->button15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button15->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button15->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button15->Location = System::Drawing::Point(12, 60);
+			this->button15->Name = L"button15";
+			this->button15->Size = System::Drawing::Size(104, 42);
+			this->button15->TabIndex = 7;
+			this->button15->Text = L"РЎРѕС…СЂР°РЅРёС‚СЊ";
+			this->button15->UseVisualStyleBackColor = false;
+			this->button15->Visible = false;
+			this->button15->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyNewForm::button15_MouseMove);
+			// 
+			// button16
+			// 
+			this->button16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(141)),
+				static_cast<System::Int32>(static_cast<System::Byte>(1)));
+			this->button16->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(141)), static_cast<System::Int32>(static_cast<System::Byte>(1)));
+			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button16->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button16->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button16->Location = System::Drawing::Point(12, 108);
+			this->button16->Name = L"button16";
+			this->button16->Size = System::Drawing::Size(104, 42);
+			this->button16->TabIndex = 23;
+			this->button16->Text = L"Р—Р°РіСЂСѓР·РёС‚СЊ";
+			this->button16->UseVisualStyleBackColor = false;
+			this->button16->Visible = false;
+			this->button16->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyNewForm::button16_MouseMove);
+			// 
+			// button17
+			// 
+			this->button17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button17->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button17->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button17->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button17->Location = System::Drawing::Point(122, 60);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(104, 42);
+			this->button17->TabIndex = 24;
+			this->button17->Text = L"Р’СЃРµ";
+			this->button17->UseVisualStyleBackColor = false;
+			this->button17->Visible = false;
+			this->button17->Click += gcnew System::EventHandler(this, &MyNewForm::button17_Click);
+			// 
+			// button18
+			// 
+			this->button18->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button18->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button18->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button18->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button18->Location = System::Drawing::Point(232, 60);
+			this->button18->Name = L"button18";
+			this->button18->Size = System::Drawing::Size(104, 42);
+			this->button18->TabIndex = 25;
+			this->button18->Text = L"РњР°С‚СЂРёС†Р°";
+			this->button18->UseVisualStyleBackColor = false;
+			this->button18->Visible = false;
+			this->button18->Click += gcnew System::EventHandler(this, &MyNewForm::button18_Click);
+			// 
+			// button19
+			// 
+			this->button19->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button19->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button19->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button19->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button19->Location = System::Drawing::Point(342, 60);
+			this->button19->Name = L"button19";
+			this->button19->Size = System::Drawing::Size(104, 42);
+			this->button19->TabIndex = 26;
+			this->button19->Text = L"Р’РµРєС‚РѕСЂ";
+			this->button19->UseVisualStyleBackColor = false;
+			this->button19->Visible = false;
+			this->button19->Click += gcnew System::EventHandler(this, &MyNewForm::button19_Click);
+			// 
+			// button20
+			// 
+			this->button20->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button20->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button20->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button20->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button20->Location = System::Drawing::Point(342, 108);
+			this->button20->Name = L"button20";
+			this->button20->Size = System::Drawing::Size(104, 42);
+			this->button20->TabIndex = 29;
+			this->button20->Text = L"Р’РµРєС‚РѕСЂ";
+			this->button20->UseVisualStyleBackColor = false;
+			this->button20->Visible = false;
+			this->button20->Click += gcnew System::EventHandler(this, &MyNewForm::button20_Click);
+			// 
+			// button21
+			// 
+			this->button21->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button21->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button21->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button21->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button21->Location = System::Drawing::Point(232, 108);
+			this->button21->Name = L"button21";
+			this->button21->Size = System::Drawing::Size(104, 42);
+			this->button21->TabIndex = 28;
+			this->button21->Text = L"РњР°С‚СЂРёС†Р°";
+			this->button21->UseVisualStyleBackColor = false;
+			this->button21->Visible = false;
+			this->button21->Click += gcnew System::EventHandler(this, &MyNewForm::button21_Click);
+			// 
+			// button22
+			// 
+			this->button22->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(167)),
+				static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button22->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+				static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(13)));
+			this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button22->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button22->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button22->Location = System::Drawing::Point(122, 108);
+			this->button22->Name = L"button22";
+			this->button22->Size = System::Drawing::Size(104, 42);
+			this->button22->TabIndex = 27;
+			this->button22->Text = L"Р’СЃРµ";
+			this->button22->UseVisualStyleBackColor = false;
+			this->button22->Visible = false;
+			this->button22->Click += gcnew System::EventHandler(this, &MyNewForm::button22_Click);
 			// 
 			// MyNewForm
 			// 
@@ -498,18 +823,30 @@ namespace slae {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(244)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->ClientSize = System::Drawing::Size(802, 398);
+			this->ClientSize = System::Drawing::Size(802, 488);
+			this->Controls->Add(this->button20);
+			this->Controls->Add(this->button21);
+			this->Controls->Add(this->button22);
+			this->Controls->Add(this->button19);
+			this->Controls->Add(this->button16);
+			this->Controls->Add(this->button15);
+			this->Controls->Add(this->button18);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->button14);
+			this->Controls->Add(this->button17);
+			this->Controls->Add(this->panel3);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->dataGridView2);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->button13);
 			this->Controls->Add(this->button12);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button11);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button10);
-			this->Controls->Add(this->button9);
-			this->Controls->Add(this->button8);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->radioButton2);
-			this->Controls->Add(this->radioButton1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
@@ -520,6 +857,9 @@ namespace slae {
 			this->Text = L"SLAE";
 			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			this->panel2->ResumeLayout(false);
+			this->panel3->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -527,76 +867,63 @@ namespace slae {
 #pragma endregion
 	
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (createdButton == nullptr) {
-			createdButton = gcnew Button();
-
-			createdButton->Text = "Сохранить";
-			createdButton->Font = gcnew System::Drawing::Font("Baskerville Old Face", 15);
-			createdButton->ForeColor = System::Drawing::Color::FromArgb(244, 250, 255);
-
-			createdButton->Size = System::Drawing::Size(104, 42);
-			createdButton->Location = System::Drawing::Point(12, 60);
-			createdButton->BackColor = System::Drawing::Color::FromArgb(255, 169, 64);
-
-			createdButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			createdButton->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(255, 169, 64);
-
-			createdButton->Click += gcnew System::EventHandler(this, &MyNewForm::createdButton_Click);
-
-			this->Controls->Add(createdButton);
-			createdButton->BringToFront();
-
-			createdButton1 = gcnew Button();
-
-			createdButton1->Text = "Загрузить";
-			createdButton1->Font = gcnew System::Drawing::Font("Baskerville Old Face", 15);
-			createdButton1->ForeColor = System::Drawing::Color::FromArgb(244, 250, 255);
-
-			createdButton1->Size = System::Drawing::Size(104, 42);
-			createdButton1->Location = System::Drawing::Point(12, 108);
-			createdButton1->BackColor = System::Drawing::Color::FromArgb(255, 169, 64);
-
-			createdButton1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			createdButton1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(255, 169, 64);
-
-			createdButton1->Click += gcnew System::EventHandler(this, &MyNewForm::createdButton1_Click);
-
-			this->Controls->Add(createdButton1);
-			createdButton1->BringToFront();
+		if (button15->Visible == false) {
+			button15->Visible = true;
+			button16->Visible = true;
 		}
 		else {
-			// Удаляем созданную кнопку
-			this->Controls->Remove(createdButton);
-			createdButton = nullptr;
+			button15->Visible = false;
+			button16->Visible = false;
 
-			this->Controls->Remove(createdButton1);
-			createdButton1 = nullptr;
+			button20->Visible = false;
+			button21->Visible = false;
+			button22->Visible = false;
+			button17->Visible = false;
+			button18->Visible = false;
+			button19->Visible = false;
 		}
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (dataGridView1->Visible == false) {
 			dataGridView1->Visible = true;
-
+			dataGridView2->Visible = true;
 			button7->Visible = true;
 			button8->Visible = true;
 			button9->Visible = true;
 			button10->Visible = true;
+			panel2->Visible = true;
+			panel3->Visible = true;
+			button14->Visible = true;
+			label3->Visible = true;
+			label4->Visible = true;
+			label5->Visible = true;
+			label6->Visible = true;
+			label7->Visible = true;
 		}
 		else {
 			dataGridView1->Visible = false;
-
+			dataGridView2->Visible = false;
 			button7->Visible = false;
 			button8->Visible = false;
 			button9->Visible = false;
 			button10->Visible = false;
+			panel2->Visible = false;
+			panel3->Visible = false;
+			button14->Visible = false;
+			label3->Visible = false;
+			label4->Visible = false;
+			label5->Visible = false;
+			label6->Visible = false;
+			label7->Visible = false;
+
 		}
 	}
 private: System::Void dataGridView1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 	if (e->KeyCode == Keys::Enter) {
-		MessageBox::Show("Идет проверка файла");
+		MessageBox::Show("РРґРµС‚ РїСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р°");
 
 		if (corr_input == true) {
-			MessageBox::Show("Данные введены корректно, включаю выбор метода решения");
+			MessageBox::Show("Р”Р°РЅРЅС‹Рµ РІРІРµРґРµРЅС‹ РєРѕСЂСЂРµРєС‚РЅРѕ, РІРєР»СЋС‡Р°СЋ РІС‹Р±РѕСЂ РјРµС‚РѕРґР° СЂРµС€РµРЅРёСЏ");
 
 			button3->Visible = true;
 			button4->Visible = true;
@@ -604,53 +931,17 @@ private: System::Void dataGridView1_KeyDown(System::Object^ sender, System::Wind
 			button6->Visible = true;
 		}
 		else {
-			MessageBox::Show("Данные введены не корректно, повторите ввод");
+			MessageBox::Show("Р”Р°РЅРЅС‹Рµ РІРІРµРґРµРЅС‹ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕ, РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ");
 		}
 	}
 }
 
-private: System::Void createdButton1_Click(System::Object^ sender, System::EventArgs^ e) {
-	OpenFileDialog^ openFileDialog = gcnew OpenFileDialog();
-
-	openFileDialog->Title = "Выберите файл";
-	openFileDialog->Filter = "Все файлы (*.*)|*.*";
-
-	if (openFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-		String^ selectedFilePath = openFileDialog->FileName;
-		MessageBox::Show("Выбран файл: " + selectedFilePath);
-	}
-}
-
-private: System::Void createdButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	SaveFileDialog^ saveFileDialog = gcnew SaveFileDialog();
-
-	saveFileDialog->Title = "Сохранить файл";
-	saveFileDialog->Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
-
-	if (saveFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-		String^ filePath = saveFileDialog->FileName;
-
-		// Ваш код для сохранения элемента в выбранный файл
-		// Например, можно использовать StreamWriter для записи данных в файл:
-		System::IO::StreamWriter^ writer = gcnew System::IO::StreamWriter(filePath);
-		writer->WriteLine("Содержимое элемента для сохранения");
-		writer->Close();
-
-		MessageBox::Show("Файл сохранен: " + filePath);
-	}
-}
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	corr_input = true;
-}
-private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	corr_input = false;
-}
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (dataGridView1->RowCount < 10) {
 		dataGridView1->RowCount = dataGridView1->RowCount + 1;
 	}
 	else {
-		MessageBox::Show("Достигнут лимит");
+		MessageBox::Show("Р”РѕСЃС‚РёРіРЅСѓС‚ Р»РёРјРёС‚");
 	}
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -658,41 +949,43 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 		dataGridView1->RowCount = dataGridView1->RowCount - 1;
 	}
 	else {
-		MessageBox::Show("Достигнут лимит");
+		MessageBox::Show("Р”РѕСЃС‚РёРіРЅСѓС‚ Р»РёРјРёС‚");
 	}
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (dataGridView1->ColumnCount < 10) {
 		dataGridView1->ColumnCount = dataGridView1->ColumnCount + 1;
+		dataGridView2->ColumnCount = dataGridView2->ColumnCount + 1;
 	}
 	else {
-		MessageBox::Show("Достигнут лимит");
+		MessageBox::Show("Р”РѕСЃС‚РёРіРЅСѓС‚ Р»РёРјРёС‚");
 	}
 }
 private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (dataGridView1->ColumnCount > 2) {
 		dataGridView1->ColumnCount = dataGridView1->ColumnCount - 1;
+		dataGridView2->ColumnCount = dataGridView2->ColumnCount - 1;
 	}
 	else {
-		MessageBox::Show("Достигнут лимит");
+		MessageBox::Show("Р”РѕСЃС‚РёРіРЅСѓС‚ Р»РёРјРёС‚");
 	}
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Решение системы");
+	MessageBox::Show("Р РµС€РµРЅРёРµ СЃРёСЃС‚РµРјС‹");
 
 	label1->Visible = true;
 	textBox1->Visible = true;
 	button11->Visible = true;
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Решение системы");
+	MessageBox::Show("Р РµС€РµРЅРёРµ СЃРёСЃС‚РµРјС‹");
 
 	label1->Visible = true;
 	textBox1->Visible = true;
 	button11->Visible = true;
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Решение системы");
+	MessageBox::Show("Р РµС€РµРЅРёРµ СЃРёСЃС‚РµРјС‹");
 
 	label1->Visible = true;
 	textBox1->Visible = true;
@@ -706,31 +999,156 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
 	SaveFileDialog^ saveFileDialog = gcnew SaveFileDialog();
 
-	saveFileDialog->Title = "Сохранить файл";
-	saveFileDialog->Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+	saveFileDialog->Title = "РЎРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р»";
+	saveFileDialog->Filter = "РўРµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ (*.txt)|*.txt|Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
 
 	if (saveFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 		String^ filePath = saveFileDialog->FileName;
 
-		// Ваш код для сохранения элемента в выбранный файл
-		// Например, можно использовать StreamWriter для записи данных в файл:
+		// Р’Р°С€ РєРѕРґ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РІС‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р»
+		// РќР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ StreamWriter РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»:
 		System::IO::StreamWriter^ writer = gcnew System::IO::StreamWriter(filePath);
-		writer->WriteLine("Содержимое элемента для сохранения");
+		writer->WriteLine("РЎРѕРґРµСЂР¶РёРјРѕРµ СЌР»РµРјРµРЅС‚Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ");
 		writer->Close();
 
-		MessageBox::Show("Файл сохранен: " + filePath);
+		MessageBox::Show("Р¤Р°Р№Р» СЃРѕС…СЂР°РЅРµРЅ: " + filePath);
 	}
 }
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Решение системы");
+	MessageBox::Show("Р РµС€РµРЅРёРµ СЃРёСЃС‚РµРјС‹");
 
 	label1->Visible = true;
 	textBox1->Visible = true;
 	button11->Visible = true;
+	button13->Visible = true;
 
 	label2->Visible = false;
 	button12->Visible = false;
 
+}
+private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
+	MessageBox::Show("РљРѕР»РёС‡РµСЃС‚РІРѕ РёС‚РµСЂР°С†РёР№: ...\nРќРѕСЂРјР° РЅР°РІСЏР·РєРё: ...");
+}
+private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Rows->Clear();
+	this->dataGridView2->Rows->Clear();
+}
+private: System::Void button15_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		button20->Visible = false;
+		button21->Visible = false;
+		button22->Visible = false;
+
+		/*Application::DoEvents();
+		Sleep(1);*/
+		button17->Visible = true;
+		/*Application::DoEvents();
+		Sleep(10);*/
+		button18->Visible = true;
+		/*Application::DoEvents();
+		Sleep(10);*/
+		button19->Visible = true;
+}
+private: System::Void button16_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		button17->Visible = false;
+		button18->Visible = false;
+		button19->Visible = false;
+
+		/*Application::DoEvents();
+		Sleep(1);*/
+		button22->Visible = true;
+		/*Application::DoEvents();
+		Sleep(10);*/
+		button21->Visible = true;
+		/*Application::DoEvents();
+		Sleep(10);*/
+		button20->Visible = true;
+}
+private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+	SaveFileDialog^ saveFileDialog = gcnew SaveFileDialog();
+
+	saveFileDialog->Title = "РЎРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р»";
+	saveFileDialog->Filter = "РўРµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ (*.txt)|*.txt|Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (saveFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ filePath = saveFileDialog->FileName;
+
+		// Р’Р°С€ РєРѕРґ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РІС‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р»
+		// РќР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ StreamWriter РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»:
+		System::IO::StreamWriter^ writer = gcnew System::IO::StreamWriter(filePath);
+		writer->WriteLine("РЎРѕРґРµСЂР¶РёРјРѕРµ СЌР»РµРјРµРЅС‚Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ");
+		writer->Close();
+
+		MessageBox::Show("Р¤Р°Р№Р» СЃРѕС…СЂР°РЅРµРЅ: " + filePath);
+	}
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+	SaveFileDialog^ saveFileDialog = gcnew SaveFileDialog();
+
+	saveFileDialog->Title = "РЎРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р»";
+	saveFileDialog->Filter = "РўРµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ (*.txt)|*.txt|Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (saveFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ filePath = saveFileDialog->FileName;
+
+		// Р’Р°С€ РєРѕРґ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РІС‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р»
+		// РќР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ StreamWriter РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»:
+		System::IO::StreamWriter^ writer = gcnew System::IO::StreamWriter(filePath);
+		writer->WriteLine("РЎРѕРґРµСЂР¶РёРјРѕРµ СЌР»РµРјРµРЅС‚Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ");
+		writer->Close();
+
+		MessageBox::Show("Р¤Р°Р№Р» СЃРѕС…СЂР°РЅРµРЅ: " + filePath);
+	}
+}
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+	SaveFileDialog^ saveFileDialog = gcnew SaveFileDialog();
+
+	saveFileDialog->Title = "РЎРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р»";
+	saveFileDialog->Filter = "РўРµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ (*.txt)|*.txt|Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (saveFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ filePath = saveFileDialog->FileName;
+
+		// Р’Р°С€ РєРѕРґ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ РІС‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р»
+		// РќР°РїСЂРёРјРµСЂ, РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ StreamWriter РґР»СЏ Р·Р°РїРёСЃРё РґР°РЅРЅС‹С… РІ С„Р°Р№Р»:
+		System::IO::StreamWriter^ writer = gcnew System::IO::StreamWriter(filePath);
+		writer->WriteLine("РЎРѕРґРµСЂР¶РёРјРѕРµ СЌР»РµРјРµРЅС‚Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ");
+		writer->Close();
+
+		MessageBox::Show("Р¤Р°Р№Р» СЃРѕС…СЂР°РЅРµРЅ: " + filePath);
+	}
+}
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+	OpenFileDialog^ openFileDialog = gcnew OpenFileDialog();
+
+	openFileDialog->Title = "Р’С‹Р±РµСЂРёС‚Рµ С„Р°Р№Р»";
+	openFileDialog->Filter = "Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (openFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ selectedFilePath = openFileDialog->FileName;
+		MessageBox::Show("Р’С‹Р±СЂР°РЅ С„Р°Р№Р»: " + selectedFilePath);
+	}
+}
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	OpenFileDialog^ openFileDialog = gcnew OpenFileDialog();
+
+	openFileDialog->Title = "Р’С‹Р±РµСЂРёС‚Рµ С„Р°Р№Р»";
+	openFileDialog->Filter = "Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (openFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ selectedFilePath = openFileDialog->FileName;
+		MessageBox::Show("Р’С‹Р±СЂР°РЅ С„Р°Р№Р»: " + selectedFilePath);
+	}
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+	OpenFileDialog^ openFileDialog = gcnew OpenFileDialog();
+
+	openFileDialog->Title = "Р’С‹Р±РµСЂРёС‚Рµ С„Р°Р№Р»";
+	openFileDialog->Filter = "Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*";
+
+	if (openFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ selectedFilePath = openFileDialog->FileName;
+		MessageBox::Show("Р’С‹Р±СЂР°РЅ С„Р°Р№Р»: " + selectedFilePath);
+	}
 }
 };
 }
